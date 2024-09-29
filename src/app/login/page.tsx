@@ -14,7 +14,7 @@ export default function Home() {
 	};
 	const handleLogin = async () => {
 		localStorage.setItem("phone", phone);
-		await axios.post("${process.env.NEXT_PUBLIC_API_URL}/user", { phone });
+		await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/user`, { phone });
 		router.push("/");
 	};
 
