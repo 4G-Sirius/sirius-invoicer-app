@@ -11,6 +11,7 @@ import {
 type Props = InputProps & {
 	label: string;
 	setValue: any;
+	value: any;
 	options: { label: string; value: string | number }[];
 };
 const FormSelect: FC<Props> = ({
@@ -42,7 +43,9 @@ const FormSelect: FC<Props> = ({
 				</SelectTrigger>
 				<SelectContent>
 					{options.map((item) => {
-						return <SelectItem value={item.value}>{item.label}</SelectItem>;
+						return (
+							<SelectItem value={item.value as any}>{item.label}</SelectItem>
+						);
 					})}
 				</SelectContent>
 			</Select>

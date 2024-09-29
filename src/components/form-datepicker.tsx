@@ -15,7 +15,7 @@ const FormDatePicker: FC<Props> = (props) => {
 	return (
 		<div className="flex flex-col gap-2 flex-1">
 			<span className="text-base font-medium text-gray-800">{props.label}</span>
-			<DatePicker {...props} value={props.value as unknown as Date} />
+			<DatePicker {...props} value={props.value as unknown as any} />
 		</div>
 	);
 };

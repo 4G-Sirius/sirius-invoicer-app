@@ -1,5 +1,6 @@
 "use client";
 import { FC } from "react";
+import { ServiceAndGoods } from "../../types";
 import {
 	Table,
 	TableBody,

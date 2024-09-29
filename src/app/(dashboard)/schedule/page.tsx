@@ -13,21 +13,22 @@ import { usePopper } from "react-popper";
 const localizer = momentLocalizer(moment);
 
 export default function ContractDetailsPage() {
-	const phone = localStorage.getItem("phone");
 	const [data, setData] = useState([]);
 	const [date, setDate] = useState(new Date());
-	const [selectedEvent, setSelectedEvent] = useState(null);
+	const [selectedEvent, setSelectedEvent] = useState<any>(null);
 	const [referenceElement, setReferenceElement] = useState(null);
 	const [popperElement, setPopperElement] = useState(null);
 	const { styles, attributes } = usePopper(referenceElement, popperElement);
 
 	useEffect(() => {
 		const fetchData = async () => {
+			const phone = localStorage.getItem("phone");
+
 			const response = await axios.get(
 				`http://localhost:3001/contract/${phone}`
 			);
 
-			const transformedData = response.data.map((item) => {
+			const transformedData = response.data.map((item: any) => {
 				return {
 					title: `Invoice #${item.id}`,
 					start: new Date(item.updatedAt),
@@ -44,7 +45,7 @@ export default function ContractDetailsPage() {
 		fetchData();
 	}, []);
 
-	const handleEventClick = (event, e) => {
+	const handleEventClick = (event: any, e: any) => {
 		setSelectedEvent(event);
 		setReferenceElement(e.currentTarget);
 	};
@@ -107,12 +108,16 @@ export default function ContractDetailsPage() {
 				/>
 				{!!selectedEvent && (
 					<div
+						// @ts-ignore
 						ref={setPopperElement}
 						style={styles.popper}
 						{...attributes.popper}
 						className="bg-white border border-gray-300 p-4 rounded-lg shadow-lg flex flex-col gap-6 z-50"
 					>
 						<div className="flex justify-between">
+							{
+								// @ts-ignore
+							}
 							<TypographyH1>{selectedEvent.title}</TypographyH1>
 							<Button onClick={handleEventClose} variant="ghost" size="icon">
 								<Image

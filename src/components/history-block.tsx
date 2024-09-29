@@ -7,11 +7,12 @@ import TypographyH1 from "./ui/h1";
 import TypographyP from "./ui/p";
 
 const HistoryBlock = () => {
-	const phone = localStorage.getItem("phone");
 	const [data, setData] = useState([]);
 
 	useEffect(() => {
 		const fetchData = async () => {
+			const phone = localStorage.getItem("phone");
+
 			const data = await axios.get(`http://localhost:3001/contract/${phone}`);
 
 			setData(data.data);

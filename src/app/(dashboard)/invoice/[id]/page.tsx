@@ -1,4 +1,5 @@
 "use client";
+// @ts-expect-error
 import html2pdf from "html2pdf.js";
 
 import BuildingBlock from "@/components/building-block";
@@ -207,6 +208,7 @@ export default function ContractDetailsPage() {
 								<FormDatePicker
 									label="Issue Date"
 									setValue={setValue}
+									// @ts-expect-error
 									value={values.issueDate}
 									placeholder="DD/MM/YYYY"
 									{...register("issueDate", { required: true })}
@@ -214,6 +216,7 @@ export default function ContractDetailsPage() {
 								<FormDatePicker
 									label="Due Date"
 									setValue={setValue}
+									// @ts-expect-error
 									value={values.dueDate as unknown as Date}
 									placeholder="DD/MM/YYYY"
 									{...register("dueDate", { required: true })}
