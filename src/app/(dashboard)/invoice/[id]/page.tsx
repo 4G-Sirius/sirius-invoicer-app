@@ -116,7 +116,7 @@ export default function ContractDetailsPage() {
 			setIsLoading(true);
 
 			const data = await axios.get<InvoiceResponse>(
-				`${process.env.API_URL}/contract/${phone}/${id}`
+				`${process.env.NEXT_PUBLIC_API_URL}/contract/${phone}/${id}`
 			);
 			const { payments, provider, beneficiary } = data.data;
 
