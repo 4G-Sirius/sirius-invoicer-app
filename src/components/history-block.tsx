@@ -13,7 +13,9 @@ const HistoryBlock = () => {
 		const fetchData = async () => {
 			const phone = localStorage.getItem("phone");
 
-			const data = await axios.get(`${process.env.API_URL}/contract/${phone}`);
+			const data = await axios.get(
+				`${process.env.NEXT_PUBLIC_API_URL}/contract/${phone}`
+			);
 
 			setData(data.data);
 		};

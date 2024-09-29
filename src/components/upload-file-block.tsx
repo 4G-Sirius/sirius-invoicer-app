@@ -24,7 +24,7 @@ const UploadFileBlock: FC = () => {
 			const formData = new FormData();
 			formData.append("images", file as File);
 			const invoice = await axios.post(
-				`${process.env.API_URL}/contract/pdf/${phone}`,
+				`${process.env.NEXT_PUBLIC_API_URL}/contract/pdf/${phone}`,
 				formData
 			);
 			toast.success("File converted successfully");
