@@ -25,7 +25,7 @@ export default function ContractDetailsPage() {
 			const phone = localStorage.getItem("phone");
 
 			const response = await axios.get(
-				`http://localhost:3001/contract/${phone}`
+				`${process.env.API_URL}/contract/${phone}`
 			);
 
 			const transformedData = response.data.map((item: any) => {
