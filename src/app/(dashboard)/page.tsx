@@ -13,7 +13,7 @@ import Link from "next/link";
 export default function Home() {
 	return (
 		<div className="flex flex-col gap-4 lg:gap-y-8 gap-y-4 items-center h-full px-4 lg:px-12 max-h-max pb-8">
-			<div className="grid grid-cols-1 lg:grid-cols-2 flex-col gap-2 lg:gap-4 items-center h-[1500px] w-full">
+			<div className="grid grid-cols-1 lg:grid-cols-2 flex-col gap-2 lg:gap-4 items-center w-full">
 				<UploadFileBlock />
 				<HistoryBlock />
 			</div>
