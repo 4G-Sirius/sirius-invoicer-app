@@ -19,7 +19,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html className="h-full overflow-x-hidden overflow-y-auto" lang="en">
+		<html className="h-svh overflow-x-hidden overflow-y-auto" lang="en">
 			<body
 				className={` ${geistSans.className} antialiased bg-background h-full`}
 			>
