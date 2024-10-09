@@ -17,7 +17,7 @@ export default function RootLayout({
 		}
 	}, []);
 	return (
-		<div className="flex flex-col h-full gap-4 overflow-y-auto overflow-x-hidden">
+		<div className="flex flex-col h-full gap-4 overflow-y-auto overflow-x-hidden pt-[96px]">
 			<Topbar />
 			{children}
 		</div>
