@@ -27,8 +27,9 @@ const UploadFileBlock: FC = () => {
 				`${process.env.NEXT_PUBLIC_API_URL}/contract/pdf/${phone}`,
 				formData
 			);
-			toast.success("File converted successfully");
+
 			router.push(`/invoice/${invoice.data.id}`);
+			toast.success("File converted successfully");
 		} catch (e) {
 			console.log(e);
 		} finally {
@@ -36,7 +37,7 @@ const UploadFileBlock: FC = () => {
 		}
 	};
 	return (
-		<BuildingBlock className="flex flex-col flex-1 gap-4 h-full ">
+		<BuildingBlock className="flex flex-col flex-1 gap-4 h-full max-h-[500px]">
 			<TypographyH1>Upload a file to convert it into an invoice</TypographyH1>
 			<List
 				items={[

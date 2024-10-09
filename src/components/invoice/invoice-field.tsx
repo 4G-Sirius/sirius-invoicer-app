@@ -8,8 +8,12 @@ type Props = {
 const InvoiceField: FC<Props> = ({ label, value }) => {
 	return (
 		<div className="flex gap-3">
-			<span className="font-bold text-base text-gray-900">{label}:</span>
-			<span className="font-medium text-base text-gray-900 ">{value}</span>
+			<span className="font-bold text-base text-gray-900 whitespace-nowrap">
+				{label}:
+			</span>
+			<span className="font-medium text-base text-gray-900 whitespace-nowrap">
+				{value}
+			</span>
 		</div>
 	);
 };

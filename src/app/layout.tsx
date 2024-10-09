@@ -19,8 +19,10 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
-			<body className={` ${geistSans.className} antialiased bg-background`}>
+		<html className="h-full overflow-x-hidden overflow-y-auto" lang="en">
+			<body
+				className={` ${geistSans.className} antialiased bg-background h-full`}
+			>
 				{children}
 				<ToastContainer />
 			</body>

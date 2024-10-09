@@ -161,7 +161,7 @@ export default function ContractDetailsPage() {
 	}, 0);
 
 	return (
-		<div className="flex flex-col h-full px-16 pb-8 overflow-hidden">
+		<div className="flex flex-col h-full md:px-16 px-4 pb-8">
 			<Link href="/">
 				<Button
 					variant="link"
@@ -171,7 +171,7 @@ export default function ContractDetailsPage() {
 					<p>Back</p>
 				</Button>
 			</Link>
-			<div className="flex flex-col lg:flex-row gap-6 h-content">
+			<div className="flex flex-col xl:flex-row gap-6 h-content">
 				<BuildingBlock className="relative flex gap-6 max-h-full">
 					<div className="h-full overflow-y-auto w-full overflow-x-hidden flex flex-col gap-6 pb-32">
 						<FormBlock title="Invoice Details">

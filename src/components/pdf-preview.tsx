@@ -58,7 +58,7 @@ const PdfPreview: FC<Props> = (props) => {
 		id,
 	} = invoice;
 	return (
-		<div className="overflow-hidden h-full px-8 py-4 flex flex-col gap-2">
+		<div className="overflow-hidden h-full  flex flex-col gap-2">
 			<div className="flex">
 				<div className="text-gray-500">{contacts.length} Invoices</div>
 				<Pagination className="flex-1">

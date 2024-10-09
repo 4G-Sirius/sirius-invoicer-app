@@ -24,6 +24,7 @@ export default function Home() {
 			router.push("/");
 		}
 	}, []);
+	
 	return (
 		<div className="flex justify-center w-full flex-col gap-4 gap-y-12 items-center h-full px-12 ">
 			<div className="bg-foreground rounded-2xl shadow-lg px-6 py-14 flex flex-col items-center gap-28 justify-between">

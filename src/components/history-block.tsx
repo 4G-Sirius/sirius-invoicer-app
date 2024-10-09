@@ -24,7 +24,7 @@ const HistoryBlock = () => {
 	}, []);
 
 	return (
-		<BuildingBlock className="flex flex-col flex-1 h-full pb-2">
+		<BuildingBlock className="flex flex-col flex-1 h-full pb-2 max-h-[500px]">
 			<TypographyH1 className="text-2xl mb-6">Invoice History</TypographyH1>
 			{!!data?.length ? (
 				<DataTable data={data} />
